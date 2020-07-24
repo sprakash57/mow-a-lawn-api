@@ -1,7 +1,7 @@
 import { Controller, Post, Body, Get } from '@nestjs/common';
-import { RegisterUsersDto } from './dto/register-users.dto';
+import { RegisterUsersDto, LoginUsersDto, BookingDto } from './dto/users.dto';
 import { UsersService } from './users.service';
-import { User } from './interfaces/user.interface';
+import { User, Quote } from './interfaces/user.interface';
 
 @Controller('users')
 export class UsersController {
@@ -12,8 +12,18 @@ export class UsersController {
         return this.usersService.fetchAll();
     }
 
-    @Post()
+    @Post('register')
     register(@Body() registerUsersDto: RegisterUsersDto): Promise<User> {
         return this.usersService.register(registerUsersDto)
+    }
+
+    @Post('login')
+    login(@Body() loginUsersDto: LoginUsersDto): Promise<User> {
+        return this.usersService.login(loginUsersDto);
+    }
+
+    @Post('book')
+    booking(@Body() bookingDto: BookingDto): Quote {
+        return this.usersService.booking(bookingDto);
     }
 }
