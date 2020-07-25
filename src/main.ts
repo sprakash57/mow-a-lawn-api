@@ -9,7 +9,6 @@ async function bootstrap() {
     .setTitle('Mow a lawn')
     .setDescription('Rest API documentation for mow a lawn')
     .setVersion('1.0')
-    .addTag('User')
     .build();
 
   const document = SwaggerModule.createDocument(app, options);
