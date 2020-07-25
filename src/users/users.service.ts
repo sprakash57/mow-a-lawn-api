@@ -41,7 +41,7 @@ export class UsersService {
             total -= total * discount;
             const quote: Quote = { total, discount }
             if (coupon) {
-                total -= total * COUPON;
+                quote.total -= quote.total * COUPON;
                 quote.coupon = '20% extra discount for new user'
             }
             return quote;
