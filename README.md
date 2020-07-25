@@ -7,8 +7,13 @@
 
 ## Description
 
-This application is a prototype to help a friend with his business. A user can register/login to the site and they can book the service. After booking 
-they will have quote depicting the total amount.
+This application is a prototype to help a friend with his business. A user can register/login to the site and they can book the service. Based on the registeration they will get 20% new user coupon that will applied automatically at the checkout. Summary of some of the services given below -
+
+To mow 1 square metre, the client will have to pay £1. 
+a. If the area is bigger than 15 square metres, a discount of 10% will be applied. 
+b. If the area is bigger than 25 square metres, a discount of 15% will be applied.
+
+After booking they will have quote depicting the total amount.
 
 ## Installation
 
